@@ -1,13 +1,4 @@
-import mongoose from "mongoose";
-import config from "../utils/config.js";
-
-try {
-  const URL = config.mongoUrl;
-  mongoose.connect(URL);
-  console.log('Base de datos conectada');
-} catch (err) {
-  console.log(error)
-}      
+import '../connection/connection.js'; //corroborar si asi se conecta
 
 class ContenedorMongoDb {
   constructor(schema) {

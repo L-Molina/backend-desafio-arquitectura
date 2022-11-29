@@ -1,4 +1,4 @@
-import {getInfo} from '../negocio/info.js';
+import {getInfo} from '../servicios/info.js';
 
 //import logger
 import { sendInfoLog } from '../logs/logger.js';
@@ -9,4 +9,4 @@ const getAllInfo = (req, res) => {
   res.status(200).send(data);   
 }
 
-export {getAllInfo}
+export { getAllInfo }

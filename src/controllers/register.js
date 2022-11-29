@@ -1,14 +1,14 @@
-import { getUser, getAll, save, deleteById } from '../negocio/usuarios.js';
+import { getUser, getAll, save, deleteById } from '../servicios/usuarios.js';
 
 //import logger
-import { infoLog } from '../logs/logger.js';
+import { sendInfoLog } from '../logs/logger.js';
 
 const getResgister = (req, res) => {
   res.render('register');
 }
 
 const postRegister = async (req, res) => {
-  infoLog(req);
+  sendInfoLog(req);
   const file = req.file;
   const image = file.filename;
   const {username, edad, telefono, direccion, password, email } = req.body
@@ -17,7 +17,7 @@ const postRegister = async (req, res) => {
     if (!user) {
       return res.render('error', { error: 'Usuario ya registrado', name:'register', url: 'auth/register' })       
     } 
-    infoLog(req);  
+    sendInfoLog(req);  
     return res.render('succes')
   })
   .catch(err => {

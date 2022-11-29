@@ -1,4 +1,4 @@
-import ContenedorMongoDB from "../../ContentMongoDb.js";
+import ContenedorMongoDB from "../../ContenedorMongoDb.js";
 import { User } from "../../models/User.js"; 
 import bcrypt from "bcrypt";
 

@@ -1,14 +1,14 @@
-import {getUser} from '../negocio/usuarios.js';
+import {getUser} from '../servicios/usuarios.js';
 
 //import logger
-import { infoLog } from '../logs/logger.js';
+import { sendInfoLog } from '../logs/logger.js';
 
 const getLogout = async (req, res) => {
 
   const datosUsuario = await getUser(req.user._id); 
   const user = datosUsuario.username;
 
-  infoLog(req);
+  sendInfoLog(req);
 
   req.session.destroy((err) => { 
     if (!err) { 

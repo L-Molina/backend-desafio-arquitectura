@@ -1,10 +1,10 @@
-import {getUser} from '../negocio/usuarios.js';
+import { getUser } from '../servicios/usuarios.js';
 
 //import logger
-import { infoLog } from '../logs/logger.js';
+import { sendInfoLog } from '../logs/logger.js';
 
 const getUsuario = async (req, res) => {
-  infoLog(req);
+  sendInfoLog(req);
   const userData = await getUser(req.user._id); 
   res.render('user', {userData});  
 }

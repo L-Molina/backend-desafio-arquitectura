@@ -1,14 +1,22 @@
 import { Router } from 'express';
+import {getProductsList, getProductsListById, postProductsList, updateProductsList, deleteProductsList} from '../../controllers/productsList.js';
 
 //router
-const productList = Router();
+const productsList = Router();
 
-//controllers
-import {productosDao} from '../../contenedores/daos/index.js';
+/* get the products */
+productsList.get("/", getProductsList);
 
-productList.get("/", async (req, res) => {
-  const productos = await productosDao.list(); 
-  res.json(productos);
-});
+/* get by ID */
+productsList.get("/:id", getProductsListById);
 
-export { productList };
+/* post Product */
+productsList.post("/", postProductsList);
+
+/* update Product */
+productsList.put("/:id", updateProductsList);
+
+/* delete Product */
+productsList.delete("/:id", deleteProductsList);
+
+export default productsList;

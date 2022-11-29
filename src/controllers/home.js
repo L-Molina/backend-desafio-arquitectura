@@ -1,5 +1,5 @@
-import { getUser } from '../negocio/usuarios.js';
-import { getAllProducts } from '../negocio/productos.js';
+import { getUser } from '../servicios/usuarios.js';
+import { getAllProducts } from '../servicios/productos.js';
 
 //import logger
 import { sendInfoLog } from '../logs/logger.js';

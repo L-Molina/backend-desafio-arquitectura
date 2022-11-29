@@ -1,8 +1,8 @@
 //import logger
-import { warningLog } from '../logs/logger.js';
+import { sendWarnLog } from '../logs/logger.js';
 
 const getError = (req, res) => {   
-  warningLog(req);
+  sendWarnLog(req);
   res.render("error", {
     error: "404 - No se Encuentra la pagina a la que quieres acceder",
     name: 'Home',
@@ -12,7 +12,7 @@ const getError = (req, res) => {
 }
 
 const postError = (req, res) => {
-  warningLog(req);
+  sendWarnLog(req);
   res.render("error", {
     error: "404 - No se Encuentra la pagina a la que quieres acceder",
     name: 'Home',
@@ -22,7 +22,7 @@ const postError = (req, res) => {
 }
 
 const deleteError = (req, res) => {
-  warningLog(req);
+  sendWarnLog(req);
   res.render("error", {
     error: "404 - No se Encuentra la pagina a la que quieres acceder",
     name: 'Home',
@@ -32,7 +32,7 @@ const deleteError = (req, res) => {
 }
 
 const putError = (req, res) => {
-  warningLog(req);
+  sendWarnLog(req);
   res.render("error", {
     error: "404 - No se Encuentra la pagina a la que quieres acceder",
     name: 'Home',

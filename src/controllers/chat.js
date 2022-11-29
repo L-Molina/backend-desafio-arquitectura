@@ -1,5 +1,5 @@
 import '../connection/connection.js'; 
-import { list, save } from '../negocio/chat.js';
+import { list, save } from '../servicios/chat.js';
 
 const getChat = async () => {
   const messages = await list();

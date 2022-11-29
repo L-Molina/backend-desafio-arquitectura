@@ -1,5 +1,5 @@
-import ContenedorArchivo from "../../contenedores/ContenedorArchivo.js";
-const url = './src/persistencia/db/messages.json'
+import ContenedorArchivo from "../../ContenedorArchivo.js";
+const url = '../../../dataBase/messages.json'
 
 class MessageDaoArchivo extends ContenedorArchivo {
   constructor () {

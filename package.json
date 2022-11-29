@@ -1,11 +1,18 @@
 {
   "name": "backend-desafio-arquitectura",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha ./test/*.test.js --exit",
+    "test-manual": "node ./test/testManual.js"
+  },
   "dependencies": {
     "axios": "^1.2.0",
     "bcrypt": "^5.1.0",
+    "compression": "^1.7.4",
     "connect-mongo": "^4.6.0",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.0.3",
@@ -14,15 +21,24 @@
     "express-session": "^1.17.3",
     "firebase-admin": "^11.3.0",
     "method-override": "^3.0.0",
+    "minimist": "^1.2.7",
     "mongodb": "^4.12.1",
     "mongoose": "^6.7.3",
     "multer": "^1.4.5-lts.1",
+    "mysql": "^2.18.1",
     "node-fetch": "^3.3.0",
     "nodemailer": "^6.8.0",
     "nodemon": "^2.0.20",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
+    "socket.io": "^4.5.4",
+    "sqlite3": "^5.1.2",
     "twilio": "^3.83.3",
     "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.1.0",
+    "supertest": "^6.3.1"
   }
 }

@@ -1,4 +1,4 @@
-import { usersDao } from '../containers/Daos/index.js';
+import { usersDao } from '../containers/daos/index.js';
 
 const getAll = async () => {
   const users = await usersDao.list();

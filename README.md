@@ -8,17 +8,7 @@
    npm install
    ```
    
-3. Crear las siguientes variables de entorno:
-   
-   PERS=mongodb
-   MONGO_URL= mongo Atlas URL
-   ACCOUNTSID= Twilio Account SID
-   AUTHTOKEN= Twilio Auth Token
-   TWILIONUMBER= Twilio Number
-   EMAIL= email donde recibir los mensajes
-   MAILPASS= gmail pasword para app
-
-4. Usá el siguiente comando para correr el proyecto, que estará disponible en http://localhost:8080
+3. Usá el siguiente comando para correr el proyecto, que estará disponible en http://localhost:8080
 
    ```
    npm node app.js

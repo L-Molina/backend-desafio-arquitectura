@@ -1,5 +1,5 @@
-import ContenedorMemoria from "../../contenedores/ContenedorMemoria.js";
-import { messages } from '../../db/memoria.js';
+import ContenedorMemoria from "../../ContenedorMemoria.js";
+import { messages } from '../../../dataBase/memoria.js';
 
 class MessageDaoMemoria extends ContenedorMemoria {
   constructor () {

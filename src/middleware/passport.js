@@ -1,19 +1,19 @@
 import passport from "passport";
 import { Strategy as LocalStrategy } from "passport-local";
 import bcrypt from "bcrypt";
-import { User } from "../contenedores/models/User.js.js"; 
+import {usersDao} from "../containers/Daos/index.js";
 
 //passport-local
 passport.use(
-  new LocalStrategy({usernameField: 'email'},(username, password, done) => {
-    User.findOne({ email: username }, (err, user) => {
+  new LocalStrategy({usernameField: 'email'}, async (username, password, done) => {
+    /* busco si existe usuario */
+    const userExist = await usersDao.findByEmail(username);
+    if (!userExist) return done(null, false);
+    /* comparo la contraseña */
+    bcrypt.compare(password, userExist.password, (err, isMatch) => {
       if (err) console.log(err);
-      if (!user) return done(null, false);
-      bcrypt.compare(password, user.password, (err, isMatch) => {
-        if (err) console.log(err);
-        if (isMatch) return done(null, user);
-        return done(null, false);
-      });
+      if (isMatch) return done(null, userExist);
+      return done(null, false);
     });
   })
 );

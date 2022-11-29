@@ -1,4 +1,4 @@
-import { getAllProducts, getProduct, saveProduct, deleteProduct, updateProduct } from '../services/productos.js';
+import { getAllProducts, getProduct, saveProduct, deleteProduct, updateProduct } from '../servicios/productos.js';
 
 //import logger
 import { sendInfoLog } from '../logs/logger.js';
